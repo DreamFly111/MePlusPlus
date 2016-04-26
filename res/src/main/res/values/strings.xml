@@ -1,0 +1,9 @@
+<resources>
+    <string name="me_nav_history">通话记录</string>
+    <string name="me_nav_home">首页</string>
+    <string name="me_nav_settings">设置</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="me_slogan">make people more simple</string>
+
+</resources>

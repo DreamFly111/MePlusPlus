@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meplus.fancy">
+    <!-- fir.im -->
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 可选 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- fabric-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- bar code -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <application
+        android:name=".app.FancyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScannerActivity"
+            android:screenOrientation="portrait" />
+        <!-- FancyAndroid -->
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="c4061ab1b96b77fb07928c663eb6bb7c" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9fbcf46a17338c0ed7859bc5de7a96c85313f88d" />
+    </application>
+
+</manifest>

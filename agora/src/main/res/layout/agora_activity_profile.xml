@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/app_background">
+
+    <RelativeLayout
+        android:id="@+id/profile_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/ic_key_rectangle_bg">
+
+        <!--Back Button-->
+
+        <ImageView
+            android:id="@+id/profile_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_key_navi_button_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/profile_title"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="40dp">
+
+            <RelativeLayout
+                android:id="@+id/profile_container"
+                android:layout_width="match_parent"
+                android:layout_height="106dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:background="@drawable/ic_info_rectangle_bg">
+
+                <EditText
+                    android:id="@+id/profile_key_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:paddingRight="12dp"
+                    android:drawablePadding="12dp"
+                    android:drawableLeft="@drawable/ic_info_cell_key"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:hint="@string/profile_key_input"
+                    android:textSize="14sp"
+                    android:enabled="false"
+                    android:background="@color/transparent"/>
+
+                <EditText
+                    android:id="@+id/profile_user_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:paddingRight="12dp"
+                    android:drawablePadding="12dp"
+                    android:drawableLeft="@drawable/ic_info_cell_user"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:hint="@string/profile_user_input"
+                    android:textSize="14sp"
+                    android:enabled="false"
+                    android:background="@color/transparent"/>
+
+            </RelativeLayout>
+            
+            <Button
+                android:id="@+id/profile_edit"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/profile_container"
+                android:text="@string/profile_edit"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/ic_info_button" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/profile_overall"
+        layout="@layout/button_overall"/>
+
+</RelativeLayout>

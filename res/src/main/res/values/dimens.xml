@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="meSloganSize">30sp</dimen>
+    <dimen name="meTitleSize">17sp</dimen>
+    <dimen name="meTextSize">15sp</dimen>
+</resources>

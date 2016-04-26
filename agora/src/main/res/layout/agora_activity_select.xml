@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Content-->
+
+    <RelativeLayout
+        android:id="@+id/select_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/app_background">
+
+        <RelativeLayout
+            android:id="@+id/select_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_key_rectangle_bg">
+
+            <!--Test Button-->
+
+            <RelativeLayout
+                android:id="@+id/select_test_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/select_test_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_go_navi_button_horn"/>
+
+                <TextView
+                    android:id="@+id/select_test_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@+id/select_test_image"
+                    android:text="@string/select_test"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+            <!--Drawer Button-->
+
+            <RelativeLayout
+                android:id="@+id/select_drawer_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_nav_menu"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/app_name_chinese"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select_actionbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp">
+
+                <!--Channel Input-->
+
+                <EditText
+                    android:id="@+id/select_channel_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="28dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_go_input_cell_computer"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:hint="@string/select_channel"
+                    android:textSize="15sp"
+                    android:background="@drawable/ic_go_input"/>
+
+                <LinearLayout
+                    android:id="@+id/select_button"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@+id/select_channel_input">
+
+                    <!--Button for video calling-->
+
+                    <RelativeLayout
+                        android:id="@+id/select_video_calling"
+                        android:layout_weight="1.0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_go_button_blue">
+
+                        <ImageView
+                            android:id="@+id/select_video_calling_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_go_button_cell_video"/>
+
+                        <TextView
+                            android:id="@+id/select_video_calling_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:textSize="15sp"
+                            android:layout_below="@+id/select_video_calling_image"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/select_video"
+                            android:textColor="@color/white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_below="@+id/select_video_calling_image"
+                            android:layout_toRightOf="@+id/select_video_calling_text"
+                            android:background="@drawable/ic_go_button_cell_arrow"/>
+
+                    </RelativeLayout>
+
+
+                    <!--Button for voice calling-->
+
+                    <RelativeLayout
+                        android:id="@+id/select_voice_calling"
+                        android:layout_weight="1.0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_go_button_yellow">
+
+                        <ImageView
+                            android:id="@+id/select_voice_calling_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/ic_go_button_cell_micro"/>
+
+                        <TextView
+                            android:id="@+id/select_voice_calling_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="9dp"
+                            android:textSize="15sp"
+                            android:layout_below="@+id/select_voice_calling_image"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/select_voice"
+                            android:textColor="@color/white"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_below="@+id/select_voice_calling_image"
+                            android:layout_toRightOf="@+id/select_voice_calling_text"
+                            android:background="@drawable/ic_go_button_cell_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <!--Test Dialog-->
+
+        <RelativeLayout
+            android:id="@+id/select_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dialog_background"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="291dp"
+                android:layout_height="237dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_evaluate_dialog_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/test_top"
+                    android:textSize="15sp"
+                    android:textColor="@color/test_black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/select_test_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/test_bottom_normal_one"
+                    android:textSize="14sp"
+                    android:textColor="@color/test_gray"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_voicetest_dialog_horn"/>
+
+                <ImageView
+                    android:id="@+id/select_test_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_voicetest_dialog_volume_grey"/>
+
+                <ImageView
+                    android:id="@+id/select_test_div"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_evaluate_dialog_div"/>
+
+                <Button
+                    android:id="@+id/select_test_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_toLeftOf="@+id/select_test_div"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/test_cancel"
+                    android:textSize="14sp"
+                    android:textColor="@color/yellow"
+                    android:background="@color/transparent"/>
+
+                <Button
+                    android:id="@+id/select_test_test"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/select_test_div"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/test_test_one"
+                    android:textSize="14sp"
+                    android:textColor="@color/drawer_blue"
+                    android:background="@color/transparent"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--Drawer-->
+
+    <RelativeLayout
+        android:id="@+id/select_drawer"
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/drawer_black">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Profile-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_blue">
+
+                    <TextView
+                        android:id="@+id/select_drawer_profile_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/select_drawer_profile_key"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@+id/select_drawer_profile_name"
+                        android:singleLine="true"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"/>
+
+                    <ImageView
+                        android:layout_width="5.8dp"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="43dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_sliding_more"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="1dp"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Record-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/select_drawer_profile"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/sliding_record"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="5.8dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_sliding_more"/>
+
+                </RelativeLayout>
+
+                <!--Resolution-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_resolution"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/select_drawer_record"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:id="@+id/select_drawer_resolution_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="27dp"
+                        android:text="@string/sliding_resolution"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/select_drawer_resolution_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/sliding_value_1080"
+                        android:textSize="12sp"
+                        android:textColor="@color/yellow"
+                        android:textStyle="bold"/>
+
+                    <SeekBar
+                        android:id="@+id/select_drawer_resolution_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/select_drawer_resolution_text"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="15dp"
+                        android:max="3"
+                        android:progress="3"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Rate-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/select_drawer_resolution"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:id="@+id/select_drawer_rate_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="27dp"
+                        android:text="@string/sliding_rate"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/select_drawer_rate_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/sliding_value_10m"
+                        android:textSize="12sp"
+                        android:textColor="@color/yellow"
+                        android:textStyle="bold"/>
+
+                    <SeekBar
+                        android:id="@+id/select_drawer_rate_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/select_drawer_rate_text"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="15dp"
+                        android:max="6"
+                        android:progress="6"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Frame-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/select_drawer_rate"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:id="@+id/select_drawer_frame_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="27dp"
+                        android:text="@string/sliding_frame"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/select_drawer_frame_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/sliding_value_60"
+                        android:textSize="12sp"
+                        android:textColor="@color/yellow"
+                        android:textStyle="bold"/>
+
+                    <SeekBar
+                        android:id="@+id/select_drawer_frame_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/select_drawer_frame_text"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="15dp"
+                        android:max="4"
+                        android:progress="4"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Volume-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_volume"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/select_drawer_frame"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:id="@+id/select_drawer_volume_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="27dp"
+                        android:text="@string/sliding_volume"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/select_drawer_volume_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:textSize="12sp"
+                        android:textColor="@color/yellow"
+                        android:textStyle="bold"/>
+
+                    <SeekBar
+                        android:id="@+id/select_drawer_volume_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/select_drawer_volume_text"
+                        android:paddingLeft="27dp"
+                        android:paddingRight="15dp"
+                        android:max="5"
+                        android:progress="5"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="27dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Tape-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_tape"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/select_drawer_volume"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/sliding_tape"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <Switch
+                        android:id="@+id/select_drawer_tape_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textOn=""
+                        android:textOff=""/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Path-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_below="@+id/select_drawer_tape"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_black">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/select_drawer_path_text"
+                            android:layout_weight="1.0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="5dp"
+                            android:text="@string/sliding_path"
+                            android:textSize="12sp"
+                            android:textColor="@color/light_white"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/select_drawer_path_value"
+                            android:layout_weight="1.0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:paddingTop="5dp"
+                            android:singleLine="true"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--Float-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_float"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/select_drawer_path"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/sliding_float"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <Switch
+                        android:id="@+id/select_drawer_float_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textOn=""
+                        android:textOff=""/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/ic_sliding_div"/>
+
+                </RelativeLayout>
+
+                <!--About-->
+
+                <RelativeLayout
+                    android:id="@+id/select_drawer_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/select_drawer_float"
+                    android:paddingLeft="27dp"
+                    android:background="@color/drawer_black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/sliding_about"
+                        android:textSize="12sp"
+                        android:textColor="@color/light_white"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:layout_width="5.8dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_sliding_more"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/select_drawer_about"
+                    android:background="@color/drawer_black">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

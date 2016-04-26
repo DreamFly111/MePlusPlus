@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_login_bg">
+
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="93dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_login_logo"/>
+
+    <!--By Key-->
+
+    <Button
+        android:id="@+id/main_button_by_key"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/main_logo"
+        android:gravity="center"
+        android:text="@string/main_by_key"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_login_button_blue"/>
+
+    <!--No Key-->
+
+    <Button
+        android:id="@+id/main_button_no_key"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/main_no_key"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/ic_login_button_yellow"/>
+
+
+</RelativeLayout>

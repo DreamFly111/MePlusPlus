@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MePlusPlus.iml" filepath="$PROJECT_DIR$/MePlusPlus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agora/agora.iml" filepath="$PROJECT_DIR$/agora/agora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avos/avos.iml" filepath="$PROJECT_DIR$/avos/avos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bluetoothspp/bluetoothspp.iml" filepath="$PROJECT_DIR$/bluetoothspp/bluetoothspp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/client.iml" filepath="$PROJECT_DIR$/client/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/events/events.iml" filepath="$PROJECT_DIR$/events/events.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fancy/fancy.iml" filepath="$PROJECT_DIR$/fancy/fancy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pubnub/pubnub.iml" filepath="$PROJECT_DIR$/pubnub/pubnub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/res/res.iml" filepath="$PROJECT_DIR$/res/res.iml" />
+      <module fileurl="file://$PROJECT_DIR$/robot/robot.iml" filepath="$PROJECT_DIR$/robot/robot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slamtec/slamtec.iml" filepath="$PROJECT_DIR$/slamtec/slamtec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/speech/speech.iml" filepath="$PROJECT_DIR$/speech/speech.iml" />
+    </modules>
+  </component>
+</project>

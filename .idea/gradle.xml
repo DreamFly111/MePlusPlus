@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/agora" />
+            <option value="$PROJECT_DIR$/avos" />
+            <option value="$PROJECT_DIR$/base" />
+            <option value="$PROJECT_DIR$/bluetoothspp" />
+            <option value="$PROJECT_DIR$/client" />
+            <option value="$PROJECT_DIR$/events" />
+            <option value="$PROJECT_DIR$/fancy" />
+            <option value="$PROJECT_DIR$/pubnub" />
+            <option value="$PROJECT_DIR$/res" />
+            <option value="$PROJECT_DIR$/robot" />
+            <option value="$PROJECT_DIR$/slamtec" />
+            <option value="$PROJECT_DIR$/speech" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

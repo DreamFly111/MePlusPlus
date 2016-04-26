@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meplus.app">
+
+    <!-- fabric -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9fbcf46a17338c0ed7859bc5de7a96c85313f88d" />
+    </application>
+
+</manifest>
